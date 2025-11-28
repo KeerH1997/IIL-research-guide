@@ -4,524 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>常用国际投资法网络资源必读指南（第三版） | WHUCOIL</title>
-  <style>
-    :root {
-      --bg: #f5f6fa;
-      --bg-elevated: #ffffff;
-      --border-subtle: #e0e4ee;
-      --primary: #1b3b6f;
-      --primary-soft: #e3ebff;
-      --accent: #c5943f;
-      --text-main: #1f2430;
-      --text-muted: #5b6478;
-      --sidebar-width: 270px;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --radius-lg: 14px;
-      --radius-md: 10px;
-      --radius-pill: 999px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                   "Segoe UI", "Helvetica Neue", Arial, "Noto Sans SC",
-                   "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: radial-gradient(circle at top left, #edf1ff 0, #f6f7fb 45%, #f8fafc 100%);
-      color: var(--text-main);
-      scroll-behavior: smooth;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      width: var(--sidebar-width);
-      padding: 28px 24px;
-      background: linear-gradient(160deg, #0f172a 0%, #111827 40%, #1f2937 100%);
-      color: #e5e7eb;
-      box-shadow: 8px 0 24px rgba(15, 23, 42, 0.25);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .brand-title {
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #f9fafb;
-    }
-
-    .brand-sub {
-      font-size: 13px;
-      color: #9ca3af;
-      line-height: 1.4;
-    }
-
-    .sidebar-divider {
-      border: none;
-      border-top: 1px solid rgba(148, 163, 184, 0.45);
-      margin: 4px 0 10px;
-    }
-
-    .toc-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9ca3af;
-      margin-bottom: 8px;
-    }
-
-    .toc {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
-
-    .toc a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      font-size: 14px;
-      color: #e5e7eb;
-      text-decoration: none;
-      transition: background 0.18s ease, color 0.18s ease, transform 0.08s ease;
-    }
-
-    .toc a span.index {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      font-size: 11px;
-      color: #cbd5f5;
-    }
-
-    .toc a:hover {
-      background: rgba(55, 65, 81, 0.85);
-      transform: translateX(1px);
-    }
-
-    .toc a.active {
-      background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
-      color: #f9fafb;
-    }
-
-    .toc a.active span.index {
-      border-color: rgba(239, 246, 255, 0.9);
-      background: rgba(15, 23, 42, 0.85);
-    }
-
-    .sidebar-footer {
-      margin-top: auto;
-      font-size: 12px;
-      color: #9ca3af;
-      line-height: 1.5;
-    }
-
-    .sidebar-footer strong {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    /* Main content */
-    .content {
-      flex: 1;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 32px 32px 40px;
-    }
-
-    .intro {
-      background: radial-gradient(circle at top left, #e0edff 0, #f5f7ff 45%, #ffffff 100%);
-      border-radius: 24px;
-      padding: 28px 28px 24px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(191, 219, 254, 0.7);
-      margin-bottom: 28px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .intro::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.13), transparent 60%);
-      pointer-events: none;
-    }
-
-    .intro-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .intro-title {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #0f172a;
-    }
-
-    .intro-badge {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(15, 23, 42, 0.18);
-      background: rgba(15, 23, 42, 0.02);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #374151;
-      white-space: nowrap;
-    }
-
-    .intro-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .intro-body {
-      font-size: 14px;
-      color: var(--text-main);
-      line-height: 1.7;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .intro-body p + p {
-      margin-top: 8px;
-    }
-
-    .intro-note {
-      margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px dashed rgba(148, 163, 184, 0.9);
-      background: rgba(248, 250, 252, 0.9);
-      font-size: 13px;
-      color: #4b5563;
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-    }
-
-    .intro-note-label {
-      font-weight: 600;
-      color: #111827;
-      white-space: nowrap;
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 36px;
-    }
-
-    section:last-of-type {
-      margin-bottom: 18px;
-    }
-
-    .section-header {
-      margin-bottom: 14px;
-    }
-
-    .section-kicker {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 650;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title span.index {
-      font-size: 12px;
-      padding: 2px 9px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(209, 213, 219, 0.9);
-      background: #f3f4f6;
-      color: #4b5563;
-    }
-
-    .section-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, #ffffff 0%, #f9fafb 45%, #ffffff 100%);
-      border-radius: var(--radius-lg);
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.06), transparent 55%);
-      pointer-events: none;
-    }
-
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .card-image {
-      flex-shrink: 0;
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      background: linear-gradient(145deg, #1d4ed8, #0ea5e9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #e5f0ff;
-      font-size: 24px;
-      font-weight: 600;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
-    }
-
-    .card-title-group {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 650;
-      color: #111827;
-    }
-
-    .card-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .card-body {
-      font-size: 13px;
-      color: var(--text-main);
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
-    }
-
-    .card-body p + p {
-      margin-top: 4px;
-    }
-
-    .card-list {
-      margin-top: 6px;
-      padding-left: 16px;
-      font-size: 13px;
-      color: var(--text-main);
-    }
-
-    .card-list li + li {
-      margin-top: 2px;
-    }
-
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 6px;
-      font-size: 12px;
-      color: var(--text-muted);
-      position: relative;
-      z-index: 1;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
-      background: var(--primary-soft);
-      color: var(--primary);
-      border: 1px solid rgba(129, 140, 248, 0.7);
-      font-size: 11px;
-      font-weight: 500;
-    }
-
-    .tag--paid {
-      background: #fef3c7;
-      color: #92400e;
-      border-color: #fbbf24;
-    }
-
-    .tag--mixed {
-      background: #ecfeff;
-      color: #036672;
-      border-color: #22c3d3;
-    }
-
-    .rating {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 12px;
-      color: #92400e;
-    }
-
-    .stars {
-      color: #f59e0b;
-      letter-spacing: 1px;
-    }
-
-    .link-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      font-size: 11px;
-      color: #1d4ed8;
-      margin-top: 4px;
-    }
-
-    .link-badge span.icon {
-      font-size: 12px;
-    }
-
-    .section-meta {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 12px;
-      font-style: italic;
-    }
-
-    .footer {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-      font-size: 12px;
-      color: var(--text-muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: space-between;
-    }
-
-    .footer strong {
-      color: var(--text-main);
-    }
-
-    @media (max-width: 960px) {
-      .layout {
-        flex-direction: column;
-      }
-      .sidebar {
-        position: static;
-        height: auto;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 16px;
-      }
-      .brand-sub {
-        display: none;
-      }
-      .toc-title {
-        display: none;
-      }
-      .toc {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 4px;
-        justify-content: flex-end;
-      }
-      .toc a {
-        padding: 6px 10px;
-        font-size: 12px;
-      }
-      .content {
-        padding: 18px 16px 28px;
-      }
-      .intro-body {
-        display: block;
-      }
-      .intro-body p + p {
-        margin-top: 6px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="layout">
@@ -602,6 +85,11 @@
         <div class="cards-grid">
           <!-- UNCTAD -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad.jpg" alt="联合国贸发会议" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
             <div class="card-header">
               <div class="card-image">U</div>
               <div class="card-title-group">
@@ -637,6 +125,11 @@
 
           <!-- ICSID -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid.jpg" alt="国际投资争端解决中心" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
             <div class="card-header">
               <div class="card-image">I</div>
               <div class="card-title-group">
@@ -668,6 +161,11 @@
 
           <!-- OECD -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/oecd.jpg" alt="经济合作与发展组织" /> -->
+              <div class="card-image-placeholder">O</div>
+            </div>
             <div class="card-header">
               <div class="card-image">O</div>
               <div class="card-title-group">
@@ -703,6 +201,11 @@
 
           <!-- UNCITRAL WGIII -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/uncitral.jpg" alt="UNCITRAL 第三工作组" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
             <div class="card-header">
               <div class="card-image">U</div>
               <div class="card-title-group">
@@ -732,6 +235,11 @@
 
           <!-- MIGA -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/miga.jpg" alt="多边投资担保机构" /> -->
+              <div class="card-image-placeholder">M</div>
+            </div>
             <div class="card-header">
               <div class="card-image">M</div>
               <div class="card-title-group">
@@ -779,6 +287,11 @@
         <div class="cards-grid">
           <!-- IAReporter -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/iareporter.jpg" alt="Investment Arbitration Reporter" /> -->
+              <div class="card-image-placeholder">A</div>
+            </div>
             <div class="card-header">
               <div class="card-image">A</div>
               <div class="card-title-group">
@@ -813,6 +326,11 @@
 
           <!-- TDM -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/tdm.jpg" alt="Transnational Dispute Management" /> -->
+              <div class="card-image-placeholder">T</div>
+            </div>
             <div class="card-header">
               <div class="card-image">T</div>
               <div class="card-title-group">
@@ -845,6 +363,11 @@
 
           <!-- GAR -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/gar.jpg" alt="Global Arbitration Review" /> -->
+              <div class="card-image-placeholder">G</div>
+            </div>
             <div class="card-header">
               <div class="card-image">G</div>
               <div class="card-title-group">
@@ -878,6 +401,11 @@
 
           <!-- Kluwer Arbitration Blog -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/kluwer-blog.jpg" alt="Kluwer Arbitration Blog" /> -->
+              <div class="card-image-placeholder">K</div>
+            </div>
             <div class="card-header">
               <div class="card-image">K</div>
               <div class="card-title-group">
@@ -922,6 +450,11 @@
         <div class="cards-grid">
           <!-- bilaterals.org -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/bilaterals.jpg" alt="bilaterals.org" /> -->
+              <div class="card-image-placeholder">B</div>
+            </div>
             <div class="card-header">
               <div class="card-image">B</div>
               <div class="card-title-group">
@@ -956,6 +489,11 @@
 
           <!-- CCSI -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/ccsi.jpg" alt="哥伦比亚可持续投资中心" /> -->
+              <div class="card-image-placeholder">C</div>
+            </div>
             <div class="card-header">
               <div class="card-image">C</div>
               <div class="card-title-group">
@@ -987,6 +525,11 @@
 
           <!-- IISD -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/iisd.jpg" alt="国际可持续发展研究所" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
             <div class="card-header">
               <div class="card-image">I</div>
               <div class="card-title-group">
@@ -1011,7 +554,7 @@
                 <span class="tag">免费访问</span>
               </div>
               <div class="rating">
-                <span classstars>★★★★☆</span>
+                <span class="stars">★★★★☆</span>
                 <span>交叉重点</span>
               </div>
             </div>
@@ -1019,6 +562,11 @@
 
           <!-- Kluwer Arbitration (database) -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/kluwer.jpg" alt="Kluwer Arbitration" /> -->
+              <div class="card-image-placeholder">K</div>
+            </div>
             <div class="card-header">
               <div class="card-image">K</div>
               <div class="card-title-group">
@@ -1070,6 +618,11 @@
         <div class="cards-grid">
           <!-- ICSID case database -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid.jpg" alt="ICSID 案例数据库" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
             <div class="card-header">
               <div class="card-image">I</div>
               <div class="card-title-group">
@@ -1100,6 +653,11 @@
 
           <!-- UNCTAD dispute navigator -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad-dispute.jpg" alt="UNCTAD 投资争端解决导航" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
             <div class="card-header">
               <div class="card-image">U</div>
               <div class="card-title-group">
@@ -1132,6 +690,11 @@
 
           <!-- ITA Law -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/italaw.jpg" alt="ITA Law" /> -->
+              <div class="card-image-placeholder">L</div>
+            </div>
             <div class="card-header">
               <div class="card-image">L</div>
               <div class="card-title-group">
@@ -1164,6 +727,11 @@
 
           <!-- Jus Mundi -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/jusmundi.jpg" alt="Jus Mundi" /> -->
+              <div class="card-image-placeholder">J</div>
+            </div>
             <div class="card-header">
               <div class="card-image">J</div>
               <div class="card-title-group">
@@ -1196,6 +764,11 @@
 
           <!-- ISLG -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/islg.jpg" alt="ISLG 投资者—东道国争端解决法律指南" /> -->
+              <div class="card-image-placeholder">S</div>
+            </div>
             <div class="card-header">
               <div class="card-image">S</div>
               <div class="card-title-group">
@@ -1228,6 +801,11 @@
 
           <!-- Oxford Investment Claims -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/oxford.jpg" alt="Oxford Investment Claims" /> -->
+              <div class="card-image-placeholder">O</div>
+            </div>
             <div class="card-header">
               <div class="card-image">O</div>
               <div class="card-title-group">
@@ -1279,6 +857,11 @@
         <div class="cards-grid">
           <!-- UNCTAD IIA Navigator -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad-iia.jpg" alt="UNCTAD International Investment Agreements Navigator" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
             <div class="card-header">
               <div class="card-image">U</div>
               <div class="card-title-group">
@@ -1311,6 +894,11 @@
 
           <!-- EDIT -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/edit.jpg" alt="EDIT 投资条约电子数据库" /> -->
+              <div class="card-image-placeholder">E</div>
+            </div>
             <div class="card-header">
               <div class="card-image">E</div>
               <div class="card-title-group">
@@ -1346,6 +934,11 @@
 
           <!-- MOFCOM BIT list -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/mofcom-bit.jpg" alt="商务部：我国对外签订双边投资协定一览表" /> -->
+              <div class="card-image-placeholder">M</div>
+            </div>
             <div class="card-header">
               <div class="card-image">M</div>
               <div class="card-title-group">
@@ -1375,6 +968,11 @@
 
           <!-- MOFCOM FTA portal -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/mofcom-fta.jpg" alt="中国自由贸易区服务网" /> -->
+              <div class="card-image-placeholder">F</div>
+            </div>
             <div class="card-header">
               <div class="card-image">F</div>
               <div class="card-title-group">
@@ -1404,6 +1002,11 @@
 
           <!-- ICSID Convention -->
           <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid-convention.jpg" alt="《ICSID 公约》官方网站" /> -->
+              <div class="card-image-placeholder">C</div>
+            </div>
             <div class="card-header">
               <div class="card-image">C</div>
               <div class="card-title-group">
